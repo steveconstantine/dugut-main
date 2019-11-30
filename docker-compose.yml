@@ -1,9 +1,6 @@
-version: '3.7'
-
+version: '3'
 services:
-
-  sample:
-    container_name: my-dugut
+  web:
     build:
       context: .
       dockerfile: Dockerfile
