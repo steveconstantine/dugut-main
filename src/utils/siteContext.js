@@ -57,6 +57,12 @@ const reducer = (state, action) => {
         curAppReview: "SUBMITTED"
       };
 
+      case "UPDATE_SDG":
+        return {
+          ...state,
+          curSDG: action.data
+      };
+
     case "UPDATE_DASHBOARD_GREETING":
       return {
         ...state,

@@ -10,7 +10,11 @@ export const ATTENDEE_LIST_ORGANIZER = {
   pathname: "/attendees",
   state: { as: "ORGANIZER" }
 };
-export const MAP = "/map";
+export const SDG = {
+  pathname: "/SDG",
+  state: { modal: true, onTopOf: "/" }
+};
+
 export const SCHEDULE = "/schedule";
 export const PROFILE = {
   pathname: "/profile",
@@ -29,7 +33,7 @@ export const FINDER = {
   "/appreview": APP_REVIEW,
   "/checkin": ATTENDEE_LIST_VOLUNTEER,
   "/attendees": ATTENDEE_LIST_ORGANIZER,
-  "/map": MAP,
+  "/SDG": SDG,
   "/schedule": SCHEDULE,
   "/profile": PROFILE,
   "/help": HELP,

@@ -25,7 +25,7 @@ const Card = styled.div`
 export default ({
   className,
   color = "white",
-  backgroundColor = "black",
+  backgroundColor = "transparent",
   backgroundImg,
   onClickHandler,
   children

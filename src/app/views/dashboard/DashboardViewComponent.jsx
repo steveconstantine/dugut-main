@@ -155,7 +155,8 @@ const DashboardViewComponent = ({
   curUser,
   greetingInfo,
   toastInfo,
-  userDashboards
+  userDashboards,
+  SDGBG
 }) => (
   <Container>
     <PageHeader>
@@ -192,7 +193,7 @@ const DashboardViewComponent = ({
         {curUser &&
           userDashboards[curUser.role] &&
           userDashboards[curUser.role].map(tileInfo => (
-            <NavTile key={tileInfo.label} {...tileInfo} />
+            <NavTile SDGBG={SDGBG} key={tileInfo.label} {...tileInfo} />
           ))}
       </TilesContainer>
     </Dashboard>

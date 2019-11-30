@@ -34,6 +34,7 @@ library.add(
 );
 
 export const displayWidthCutoffs = {
+  largedesktop: 3200,
   desktop: 2160,
   tablet: 1024,
   phone: 600

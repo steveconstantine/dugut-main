@@ -14,13 +14,13 @@ const Modal = styled(Card)`
 
 const CloseButton = styled.button`
   position: absolute;
-  top: -1vw;
-  right: -1vw;
+  top: 1vw;
+  right: 1vw;
   width: 2vw;
   height: 2vw;
 
   border: none;
-  border-radius: 50%;
+  border-radius: 0;
 
   cursor: pointer;
 

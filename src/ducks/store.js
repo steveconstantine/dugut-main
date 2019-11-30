@@ -1,6 +1,7 @@
 /* -------------- REDUX STORE SETUP -------------- */
 import { createStore } from "redux";
 import appReducer from "./reducers";
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
 const initialState = {
   dashboard: {
@@ -15,6 +16,6 @@ const initialState = {
     }
   }
 };
-const appStore = createStore(appReducer, initialState);
+const appStore = createStore(appReducer, initialState, devToolsEnhancer());
 
 export default appStore;

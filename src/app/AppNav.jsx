@@ -9,7 +9,7 @@ import DashboardView from "./views/dashboard/DashboardViewContainer";
 import ApplicationView from "./views/application/ApplicationViewContainer";
 import AppReviewView from "./views/appreview/AppReviewViewContainer";
 import AttendeesView from "./views/attendees/AttendeesViewContainer";
-import MapView from "./views/map/MapViewContainer";
+import SDGView from "./views/sdgs/SDGViewContainer";
 import ScheduleView from "./views/schedule/ScheduleViewContainer";
 import MyProfileView from "./views/myprofile/MyProfileViewContainer";
 import EventView from "./views/event/EventViewContainer";
@@ -123,7 +123,6 @@ const AppNav = ({ location }) => {
           path={ROUTES.ATTENDEE_LIST_VOLUNTEER.pathname}
           component={AttendeesView}
         />
-        <Route exact path={ROUTES.MAP} component={MapView} />
         <Route exact path={ROUTES.SCHEDULE} component={ScheduleView} />
         <Route exact path={ROUTES.HELP} component={HelpView} />
         <Route exact path={ROUTES.JUDGING_TOOL} component={JudgingToolView} />
@@ -146,6 +145,7 @@ const AppNav = ({ location }) => {
             path={ROUTES.PROFILE.pathname}
             component={MyProfileView}
           />
+          <Route exact path={ROUTES.SDG.pathname} component={SDGView} />
           <Route exact path={ROUTES.EVENT} component={EventView} />
         </AnimatedSwitch>
       </ModalFrame>

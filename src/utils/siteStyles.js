@@ -25,7 +25,8 @@ export const sizes = {
   heading: {
     big: "2.5em",
     normal: "2em",
-    small: "1.5em"
+    small: "1.5em",
+    tiny: "1.2em"
   },
   bodyText: {
     big: "1.2em",

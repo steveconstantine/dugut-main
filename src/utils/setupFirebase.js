@@ -2,6 +2,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+require('dotenv').config()
 
 // config for Firebase (keys stored in gitignored .env file)
 const firebaseConfig = {

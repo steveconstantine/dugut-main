@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import Heading from "../../../../shared/Heading/HeadingComponent";
-import Card from "../../../../shared/Card/CardComponent";
+import Heading from "../..//Heading/HeadingComponent";
+import Card from "../../Card/CardComponent";
 
 const NavTile = styled(Card)`
   grid-area: ${props => props.gridarea};
@@ -23,60 +23,44 @@ const NavTileLink = styled(Link)`
 `;
 
 export default ({
+  value,
   label,
   color,
   backgroundColor,
   backgroundImg,
-  linkTo,
   gridArea,
-  SDGBG,
-  disabled
+  disabled,
+  updateAppInfo,
+  submitAppInfo
 }) => {
-  const augmentedLinkTo =
+/*  const augmentedLinkTo =
     typeof linkTo === "object"
       ? { ...linkTo, state: { ...linkTo.state, cameFromApp: true } }
-      : { pathname: linkTo, state: { cameFromApp: true } };
+      : { pathname: linkTo, state: { cameFromApp: true } }; */
   const [tileClicked, setClicked] = useState(false);
 
   if (tileClicked) setClicked(false);
 
-  let bgImg = backgroundImg
-
-  console.log('navtilecomponent')
-
-  console.log(label)
-  console.log(backgroundImg)
-
-  if (label === "") {
-    bgImg = SDGBG;
+  const tileClick = () => {
+    setClicked(true)
+    updateAppInfo({sdg: { value: value, label: label}})
+    submitAppInfo(value, label)
   }
-
-  console.log(bgImg)
-
 
   const Tile = (
     <NavTile
       gridarea={gridArea}
       backgroundColor={backgroundColor}
-      backgroundImg={bgImg}
+      backgroundImg={backgroundImg}
       disabled={disabled}
-      onClickHandler={disabled ? undefined : () => setClicked(true)}
+      onClickHandler={() => tileClick()}
     >
-      <Heading size="small" color={color || "white"} weight="normal">
-        {label}
-      </Heading>
     </NavTile>
   );
 
   return disabled ? (
     Tile
   ) : (
-    <NavTileLink
-      gridarea={gridArea}
-      replace={augmentedLinkTo.state && augmentedLinkTo.state.modal}
-      to={augmentedLinkTo}
-    >
-      {Tile}
-    </NavTileLink>
+    Tile
   );
 };
