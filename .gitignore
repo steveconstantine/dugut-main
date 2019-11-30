@@ -62,7 +62,6 @@ typings/
 
 .DS_Store
 .cache/
-public/
 
 # secret stuffs
 secretConfig.js
