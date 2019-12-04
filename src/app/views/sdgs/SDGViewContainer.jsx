@@ -53,7 +53,7 @@ const SDGViewContainer = ({
   const { dispatch } = useContext(SiteContext);
   const { value } = useDocument(fetchAppFirestore());
   const [ appState, updateAppState ] = useState("FETCHING");
-  const [ localAppInfo, updateLocalAppInfo ] = useState({ sdg: { value: 0, label: 'none' } });
+  const [ localAppInfo, updateLocalAppInfo ] = useState({ value: 0, label: 'none' });
   const appRef = useRef();
   appRef.current = localAppInfo;
 
@@ -63,24 +63,24 @@ const SDGViewContainer = ({
       ...newAppInfo,
     };
 
-    updateLocalAppInfo(newLocalAppInfo);
+    // updateLocalAppInfo(newLocalAppInfo);
 //    if(!newLocalAppInfo.value) dispatch({ type: "UPDATE_DASHBOARD_TOAST", data: { toastName: "appModified" } });
   }
 
   const submitAppInfo = (value, label) => {
-    console.log(value)
-    console.log(label)
     submitAppFirestore({ sdg: { value: value, label: label } });
     updateAppState("SUBMITTING");
-    dispatch({ type: "UPDATE_SDG", data: { sdg: { value: value, label: label } } });
+  //   dispatch({ type: "UPDATE_SDG", data: { sdg: { value: value, label: label } } });
     history.replace(prevLoc);
   }
 
   if(value) {
     if(value.exists && ((appState === "FETCHING") || (value.data().sdg && appState === "SUBMITTING"))) {
       updateAppState("FETCHED");
-      updateLocalAppInfo(value.data().sdg)
-      dispatch({ type: "UPDATE_SDG", data: { value: value.data().sdg.value, label: value.data().sdg.name } });
+      console.log('value.data().sdg')
+      console.log(value.data().sdg)
+      // updateLocalAppInfo(value.data().sdg)
+      // dispatch({ type: "UPDATE_SDG", data: { value: value.data().sdg.value, label: value.data().sdg.name } });
     } else if(!value.exists && (appState === "FETCHING")) {
       createAppFirestore();
       console.log('sdg created as 0')
@@ -96,7 +96,7 @@ const SDGViewContainer = ({
 
     return () => {
       window.removeEventListener('beforeunload', () => updateAppFirestore(appRef.current))
-      updateAppFirestore(appRef.current);
+      // updateAppFirestore(appRef.current);
     }
   }, [])
 

@@ -387,10 +387,7 @@ export default ({
       setProfileLoaded(true);
     }
   });
-
-  console.log('curAppInfo')
-  console.log(curAppInfo)
-
+  
   return (
     <ProfileModal
       backgroundColor="#FAFAFA"

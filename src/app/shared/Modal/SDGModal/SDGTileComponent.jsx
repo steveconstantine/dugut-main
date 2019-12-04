@@ -43,8 +43,8 @@ export default ({
 
   const tileClick = () => {
     setClicked(true)
-    updateAppInfo({sdg: { value: value, label: label}})
     submitAppInfo(value, label)
+    // submitAppInfo(value, label)
   }
 
   const Tile = (
