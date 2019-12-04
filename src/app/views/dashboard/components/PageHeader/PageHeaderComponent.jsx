@@ -33,7 +33,7 @@ const ExtraContents = styled.div`
   margin: auto 0;
 `;
 
-export default ({ title = "Equithon", onClickHandler, children }) => (
+export default ({ title = "DuGut", onClickHandler, children }) => (
   <Header>
     <MainContents
       onClick={onClickHandler}

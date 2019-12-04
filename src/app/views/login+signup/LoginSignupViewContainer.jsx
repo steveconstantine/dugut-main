@@ -54,7 +54,7 @@ const getNewDashboardGreeting = () => {
   );
 
   if (daysUntilEvent) {
-    subgreeting = `There are ${daysUntilEvent} days until Equithon!`;
+    subgreeting = `Thank you for joining DuGut!`;
   }
 
   return {
