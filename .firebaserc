@@ -1,7 +1,8 @@
 {
   "projects": {
     "prod": "equithon-platform-2019",
-    "staging": "equithon-platform-2019-staging"
+    "staging": "equithon-platform-2019-staging",
+    "default": "savvy-palace-259505"
   },
   "targets": {
     "equithon-platform-2019": {

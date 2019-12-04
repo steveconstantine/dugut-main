@@ -59,7 +59,7 @@ export const HeadContents = () => {
       <title>{siteTitle}</title>
       <meta
         name="description"
-        content="Personalized dashboard and home base for Equithon 2019 attendees."
+        content="Personalized dashboard and home base for DuGuT pre-registerees."
       />
       <link
         rel="icon"

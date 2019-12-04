@@ -1,8 +1,8 @@
 {
-  "name": "equithon-personal",
+  "name": "dugut-main",
   "version": "0.1.0",
-  "description": "Home base for Equithon 2019 volunteers.",
-  "homepage": "https://equithon-personal-2019-staging.firebaseapp.com/",
+  "description": "Home base for DuGuT.",
+  "homepage": "https://savvy-palace-259505.firebaseapp.com/",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/equithon/site-personal.git"
+    "url": "git+https://github.com/steveconstantine/dugut-main.git"
   },
   "keywords": [
     "react",
@@ -25,10 +25,10 @@
     "hackathon",
     "spa"
   ],
-  "author": "Alex Xie",
+  "author": "Stephen Cawdery",
+  "url": "https://github.com/steveconstantine/dugut-main/issues",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/equithon/site-personal/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",

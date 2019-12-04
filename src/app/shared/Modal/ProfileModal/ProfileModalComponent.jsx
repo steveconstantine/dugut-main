@@ -186,19 +186,6 @@ export default ({
               </ChangePasswordLabel>
             </InfoField>
 
-            <InfoField gridarea="extra">
-              <div className="infoFieldLabel">ATTENDING AS A...</div>
-              <input
-                className="infoFieldValue"
-                value={
-                  profileInfo.role &&
-                  profileInfo.role
-                  .toLowerCase()
-                  .replace(/\b(\w)/g, s => s.toUpperCase())
-                }
-                readOnly
-              />
-            </InfoField>
           </Info>
         </Profile>
       ) : (

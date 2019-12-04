@@ -29,7 +29,7 @@ const LoginSignupViewComponent = ({
 }) => (
   <ViewContainer>
     <PageHeader
-      logoClickHandler={() => window.open("https://equithon.org", "_self")}
+      logoClickHandler={() => window.open("https://www.dugut.app", "_self")}
     />
     <LoginSignupFormsComponent
       logIn={logIn}

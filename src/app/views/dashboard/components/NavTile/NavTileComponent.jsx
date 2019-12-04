@@ -12,6 +12,8 @@ const NavTile = styled(Card)`
   height: 100%;
   padding: 1.5em;
   border-radius: ${props => props.theme.app.border.radius};
+  background-position: top;
+  transition: background 0.7s;
 
   background-color: ${props => props.backgroundColor};
   filter: ${props => (props.disabled ? "grayscale(90%)" : "")};
@@ -42,17 +44,9 @@ export default ({
 
   let bgImg = backgroundImg
 
-  console.log('navtilecomponent')
-
-  console.log(label)
-  console.log(backgroundImg)
-
   if (label === "") {
     bgImg = SDGBG;
   }
-
-  console.log(bgImg)
-
 
   const Tile = (
     <NavTile

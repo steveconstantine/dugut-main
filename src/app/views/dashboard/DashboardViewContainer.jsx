@@ -31,10 +31,10 @@ import SDG15 from "../../../static/img/dashboard/sdgs/15.png";
 import SDG16 from "../../../static/img/dashboard/sdgs/16.png";
 import SDG17 from "../../../static/img/dashboard/sdgs/17.jpg";
 
-import SDGLogo from "../../../static/img/misc/sdgs.png";
+import SDGLogo from "../../../static/img/dashboard/sdgs/sdgs.jpg";
 
 const SDGBG = {
-  0: null,
+  0: SDGLogo,
   1: SDG1,
   2: SDG2,
   3: SDG3,
@@ -200,7 +200,6 @@ export default enhance(({ curUser, fetchAppFirestore, createAppFirestore, ...pro
       // dispatch({ type: "UPDATE_SDG", data: { value: value.data().sdg.value, label: value.data().sdg.name } });
     } else if(!value.exists && (appState === "FETCHING")) {
       createAppFirestore();
-      console.log('sdg created as 0')
       updateAppState("FETCHED");
     }
   } else {
@@ -211,9 +210,6 @@ export default enhance(({ curUser, fetchAppFirestore, createAppFirestore, ...pro
     userDashboards.HACKER.shift(); // remove application tile
     userDashboards.HACKER.unshift(dashboardTiles.rsvp); // add rsvp tile
   }
-
-  console.log(currentSDG);
-  console.log(SDGBG[currentSDG.value]);
 
   return (
     <DashboardViewComponent

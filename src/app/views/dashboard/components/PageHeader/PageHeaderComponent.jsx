@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import ColorLogo from "../../../../../static/img/logo/logo_tiny_color.png";
+import ColorLogoText from "../../../../../static/img/logo/dugut.png";
 import Heading from "../../../../shared/Heading/HeadingComponent";
 
 const Header = styled.header`
@@ -39,9 +40,7 @@ export default ({ title = "Equithon", onClickHandler, children }) => (
       clickable={onClickHandler !== undefined}
     >
       <Logo src={ColorLogo} />
-      <Title size="normal" color="primary">
-        {title}
-      </Title>
+      <Logo src={ColorLogoText} />
     </MainContents>
 
     <ExtraContents>{children}</ExtraContents>
