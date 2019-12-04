@@ -54,7 +54,7 @@ const getNewDashboardGreeting = () => {
   );
 
   if (daysUntilEvent) {
-    subgreeting = `Thank you for joining DuGut!`;
+    subgreeting = `Thank you for joining DuGut™!`;
   }
 
   return {

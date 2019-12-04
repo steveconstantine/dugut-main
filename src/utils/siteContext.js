@@ -22,7 +22,7 @@ const siteToasts = {
 
 
 const INITIAL_CONTEXT_STATE = {
-  siteTitle: "DuGut",
+  siteTitle: "My DuGut™ App",
   firebase: new Firebase(),
   sentry: new Sentry(),
   dashboardInfo: {
