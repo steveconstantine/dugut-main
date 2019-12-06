@@ -77,13 +77,10 @@ const SDGViewContainer = ({
   if(value) {
     if(value.exists && ((appState === "FETCHING") || (value.data().sdg && appState === "SUBMITTING"))) {
       updateAppState("FETCHED");
-      console.log('value.data().sdg')
-      console.log(value.data().sdg)
       // updateLocalAppInfo(value.data().sdg)
       // dispatch({ type: "UPDATE_SDG", data: { value: value.data().sdg.value, label: value.data().sdg.name } });
     } else if(!value.exists && (appState === "FETCHING")) {
       createAppFirestore();
-      console.log('sdg created as 0')
       updateAppState("FETCHED");
     }
   }

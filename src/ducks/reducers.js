@@ -9,7 +9,6 @@ const dashboardReducer = (state = {}, action) => {
       const newState = { ...state };
       newState.greetingInfo = action.info.greetingInfo;
       newState.toastInfo = action.info.toastInfo;
-      console.log(newState);
       return newState;
     }
 
